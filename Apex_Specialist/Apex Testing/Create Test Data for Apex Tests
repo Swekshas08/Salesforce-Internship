@@ -11,6 +11,9 @@ The 'generateRandomContacts' method should not insert the contact records into t
 
 
 Solution: 
+
+1.RandomContactFactory.apxc
+
 public class RandomContactFactory {
 public static List<Contact> generateRandomContacts(Integer numContactsToGenerate, String FName) {
         List<Contact> contactList = new List<Contact>();
@@ -23,6 +26,21 @@ public static List<Contact> generateRandomContacts(Integer numContactsToGenerate
         //insert contactList;
         System.debug(contactList.size());
         return contactList;
+    }
+
+}
+
+OR
+
+public class RandomContactFactory {
+    public static List<Contact> generateRandomContacts(Integer NumberofContacts, String lName){
+        List<Contact> con = new List<Contact>();
+        for(Integer i=0; i<NumberofContacts; i++){
+            lName = 'Test'+i;
+            Contact c = new Contact(FirstName=lName, LastName=lName);
+            con.add(c);
+        }
+        return con;
     }
 
 }
