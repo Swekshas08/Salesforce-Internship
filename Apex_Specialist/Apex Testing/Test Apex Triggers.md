@@ -9,7 +9,7 @@ Run your test class at least once (via 'Run All' tests the Developer Console) be
 Solution:
 
 1.RestrictContactByName.apxc
-
+```
 	trigger RestrictContactByName on Contact (before insert, before update) {
 	
 	//check contacts prior to insert or update for invalid data
@@ -21,8 +21,10 @@ Solution:
 	}
 
 }
-
+```
 2.TestRestrictContactByName.apxc
+
+```
 @isTest
 public class TestRestrictContactByName {
 static testMethod void  Test() 
@@ -47,3 +49,4 @@ static testMethod void  Test()
         
     }
 }
+```
