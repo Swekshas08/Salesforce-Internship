@@ -7,6 +7,7 @@ With 'AccountAddressTrigger' active, if an Account has a Billing Postal Code and
 
 Solution:
 
+```
 trigger AccountAddressTrigger on Account (before insert, before update) {
     for(Account a: Trigger.New){
         if(a.Match_Billing_Address__c == true && a.BillingPostalCode!= null){
@@ -15,3 +16,5 @@ trigger AccountAddressTrigger on Account (before insert, before update) {
     }
 
 }
+
+```
