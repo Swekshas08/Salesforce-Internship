@@ -10,7 +10,7 @@ Run your test class at least once
 
 
 1.VerifyDate.apxc
-
+```
 public class VerifyDate {
 	
 	//method to handle potential checks against two dates
@@ -42,10 +42,10 @@ public class VerifyDate {
 	}
 
 }
-
+```
 
 2.TestVerifyDate.apxc
-
+```
 @isTest
 public class TestVerifyDate {
     
@@ -54,6 +54,6 @@ static testMethod void testMethod1() {
      Date d1 = VerifyDate.CheckDates(System.today(),System.today()+60);
     }
 }
-
+```
 
 
